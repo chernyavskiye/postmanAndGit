@@ -1,0 +1,82 @@
+$kind: http-request
+url: https://api-sand.podeli.ru/partners/v1/orders/create_offline
+method: POST
+headers:
+  X-Correlation-ID: test_order_23_01_01
+body:
+  type: json
+  content: "{\r
+
+    \    \"order\": {\r
+
+    \        \"id\": \"test_order_23_01_01\",\r
+
+    \        \"amount\": 4000,\r
+
+    \        \"isTwoStagePayment\": false,\r
+
+    \        \"prepaidAmount\": 0,\r
+
+    \        \"items\": [\r
+
+    \            {\r
+
+    \                \"id\": \"e6ea83c3-357f-44d3-8275-dbb1ff1a4c66\",\r
+
+    \                \"article\": null,\r
+
+    \                \"name\": \"Мат для боулдеринга Camp Minido\",\r
+
+    \                \"amount\": 2000,\r
+
+    \                \"quantity\": 2,\r
+
+    \                \"prepaidAmount\": 0\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"latitude\": 59.941630,\r
+
+    \        \"longitude\": 30.418515,\r
+
+    \        \"mall\": \"ТРЦ Охта Молл\",\r
+
+    \        \"address\": \"ул. Первая 5, кв. 121, корпус, этаж\",\r
+
+    \        \"cashRegisterNumber\": \"1234567890\",\r
+
+    \        \"cashierNumber\": \"0987654321\",\r
+
+    \        \"comment\": \"12345\",\r
+
+    \        \"isTwoStagePayment\": false\r
+
+    \    },\r
+
+    \    \"clientInfo\": {\r
+
+    \        \"id\": \"ODIw\"\r
+
+    \    }\r
+
+    }"
+auth:
+  type: basic
+  credentials:
+    password: password
+    username: your_test_login
+scripts:
+  - type: beforeRequest
+    code: "/*keycloak:\r
+
+      \  auth-server-url: http://alfa-15.vm.cmx.ru:8080/auth\r
+
+      \  realm: BNPL\r
+
+      \  resource: mobile_client\r
+
+      \  public-client: true*/"
+    language: text/javascript
+order: 3000

@@ -1,0 +1,41 @@
+$kind: http-request
+description: классический рефанд
+url: https://api-sand.podeli.ru/partners/v1/orders/test_order_23_01_01/refund
+method: POST
+headers:
+  X-Correlation-ID: test_order_23_01_01
+body:
+  type: json
+  content: "{\r
+
+    \    \"order\": {\r
+
+    \        \"refund\": {\r
+
+    \            \"id\": \"test_order_23_01_01\",\r
+
+    \            \"initiator\": \"client\",\r
+
+    \            \"items\": [\r
+
+    \                {\r
+
+    \                    \"id\": \"230\",\r
+
+    \                    \"refundedQuantity\": 1\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+auth:
+  type: basic
+  credentials:
+    password: password
+    username: your_test_login
+order: 1000
