@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://api-sand.podeli.ru/partners/v1/orders/test_order_23_01_01/info
+method: GET
+headers:
+  X-Correlation-ID: test_order_23_01_01
+  Content-Type: application/json
+body:
+  type: json
+  content: ""
+auth:
+  type: basic
+  credentials:
+    password: password
+    username: your_test_login
+order: 1000

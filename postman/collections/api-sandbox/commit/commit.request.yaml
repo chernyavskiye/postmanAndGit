@@ -1,0 +1,25 @@
+$kind: http-request
+description: стандартный commit
+url: https://api-sand.podeli.ru/partners/v1/orders/test_order_23_01_01/commit
+method: POST
+headers:
+  X-Correlation-ID: test_order_23_01_01
+body:
+  type: json
+  content: "{\r
+
+    \    \"order\":{\r
+
+    \        \"amount\": 4000,\r
+
+    \        \"prepaidAmount\":0\r
+
+    \    }\r
+
+    }"
+auth:
+  type: basic
+  credentials:
+    password: password
+    username: your_test_login
+order: 1000

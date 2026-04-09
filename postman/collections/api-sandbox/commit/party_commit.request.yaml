@@ -1,0 +1,39 @@
+$kind: http-request
+description: частичный коммит
+url: https://api-sand.podeli.ru/partners/v1/orders/test_order_23_01_01/commit
+method: POST
+headers:
+  X-Correlation-ID: test_order_23_01_01
+body:
+  type: json
+  content: "{\r
+
+    \    \"order\": {\r
+
+    \        \"amount\": 350,\r
+
+    \        \"prepaidAmount\": 0,\r
+
+    \        \"items\": [\r
+
+    \            {\r
+
+    \                \"id\": \"1352323\",\r
+
+    \                \"article\": \"05M3818R0102AU\",\r
+
+    \                \"quantity\": 1\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    }\r
+
+    }"
+auth:
+  type: basic
+  credentials:
+    username: your_test_login
+    password: password
+order: 2000

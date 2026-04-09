@@ -1,0 +1,26 @@
+$kind: http-request
+url: https://api-sand.podeli.ru/partners/v1/orders/calculate
+method: POST
+headers:
+  X-Correlation-ID: test_order_23_01_01
+body:
+  type: json
+  content: "{\r\n    \"sum\": 0\r\n}"
+auth:
+  type: basic
+  credentials:
+    password: password
+    username: your_test_login
+scripts:
+  - type: beforeRequest
+    code: "/*keycloak:\r
+
+      \  auth-server-url: http://alfa-15.vm.cmx.ru:8080/auth\r
+
+      \  realm: BNPL\r
+
+      \  resource: mobile_client\r
+
+      \  public-client: true*/"
+    language: text/javascript
+order: 1000
