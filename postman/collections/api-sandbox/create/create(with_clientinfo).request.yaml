@@ -1,6 +1,6 @@
 $kind: http-request
 name: create(with_clientinfo)
-description: содержит полную информацию по клиенту
+description: содержит полную информацию по клиенту. Ну почти всю.
 url: https://api-sand.podeli.ru/partners/v1/orders/create
 method: POST
 headers:
