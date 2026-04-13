@@ -1,6 +1,6 @@
 $kind: http-request
 name: create(with_phone)
-description: содержит только телефон клиента. Пока.
+description: содержит только телефон клиента. Пока. 777777
 url: https://api-sand.podeli.ru/partners/v1/orders/create
 method: POST
 headers:
